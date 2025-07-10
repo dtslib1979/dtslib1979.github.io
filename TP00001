@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="ko" itemscope itemtype="https://schema.org/Article">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <!-- SEO 최적화 메타 태그 -->
+    <title>철학적 프로그래밍 학습론: 혁신적 교육 패러다임 | 사고와 코드의 융합</title>
+    <meta name="description" content="프로그래밍을 철학적 사고로 배우는 혁신적 방법론. 플라톤부터 니체까지, 철학자별 언어 매칭으로 창발적 사고력을 기르는 새로운 교육 패러다임을 제시합니다.">
+    <meta name="keywords" content="프로그래밍 교육, 철학적 사고, 코딩 학습법, 창발적 사고, 비전공자 프로그래밍, AI 협업, 디버깅 철학, 하이브리드 아키텍처">
+    <meta name="author" content="중년고딩철학자 & Claude AI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/philosophical-programming-learning">
+    
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="철학적 프로그래밍 학습론: 사고와 코드의 융합">
+    <meta property="og:description" content="프로그래밍을 철학적 사고로 배우는 혁신적 방법론. 창발적 사고력을 기르는 새로운 교육 패러다임.">
+    <meta property="og:image" content="https://example.com/images/philosophical-programming-og.jpg">
+    <meta property="og:url" content="https://example.com/philosophical-programming-learning">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="철학적 프로그래밍 연구소">
+    
+    <!-- Twitter 카드 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="철학적 프로그래밍 학습론">
+    <meta name="twitter:description" content="프로그래밍을 철학적 사고로 배우는 혁신적 방법론">
+    <meta name="twitter:image" content="https://example.com/images/philosophical-programming-twitter.jpg">
+    
+    <!-- 구조화된 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "철학적 프로그래밍 학습론: 사고와 코드의 융합",
+        "description": "프로그래밍을 철학적 사고로 배우는 혁신적 방법론",
+        "author": {
+            "@type": "Person",
+            "name": "중년고딩철학자"
+        },
+        "datePublished": "2025-07-11",
+        "dateModified": "2025-07-11",
+        "publisher": {
+            "@type": "Organization",
+            "name": "철학적 프로그래밍 연구소"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://example.com/philosophical-programming-learning"
+        },
+        "keywords": ["프로그래밍 교육", "철학적 사고", "코딩 학습법", "창발적 사고"]
+    }
+    </script>
+    
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    
+    <!-- 폰트 프리로드 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 중요 CSS 인라인 (Above the fold) -->
+    <style>
+        /* === 핵심 CSS 변수 및 기본 스타일 === */
+        :root {
+            --primary: #8b4513;
+            --secondary: #d2691e;
+            --accent: #a0522d;
+            --bg: #f9f7f4;
+            --bg-alt: #ffffff;
+            --bg-section: #f4f1e8;
+            --text: #1a1008;
+            --text-light: #4a453d;
+            --text-muted: #6b6b6b;
+            --white: #ffffff;
+            --border: rgba(139, 69, 19, 0.15);
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --container-max: min(1200px, 95vw);
+            --content-width: min(65ch, 90vw);
+        }
+
+        /* 다크모드 지원 */
+        [data-theme="dark"] {
+            --bg: #0a0a0a;
+            --bg-alt: #1a1a1a;
+            --bg-section: #111111;
+            --text: #f5f5f5;
+            --text-light: #d0d0d0;
+            --text-muted: #a0a0a0;
+            --white: #1f1f1f;
+            --border: rgba(255, 255, 255, 0.2);
+            --shadow: 0 4px 20px rgba(0,0,0,0.4);
+            --shadow-hover: 0 8px 32px rgba(0,0,0,0.5);
+        }
+
+        /* 고대비 모드 지원 */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary: #000000;
+                --secondary: #333333;
+                --bg: #ffffff;
+                --bg-alt: #ffffff;
+                --bg-section: #f8f8f8;
+                --text: #000000;
+                --text-light: #333333;
+                --white: #ffffff;
+                --border: #000000;
+                --shadow: 0 4px 20px rgba(0,0,0,0.3);
+            }
+            
+            [data-theme="dark"] {
+                --bg: #000000;
+                --bg-alt: #000000;
+                --bg-section: #111111;
+                --text: #ffffff;
+                --text-light: #cccccc;
+                --white: #000000;
+                --border: #ffffff;
+            }
+            
+            .philosophy-card,
+            .chart-container,
+            .interactive-demo,
+            .diagnostic-simulator {
+                border: 3px solid var(--text) !important;
+                background: var(--bg-alt) !important;
+            }
+            
+            .nav-menu a,
+            .theme-toggle,
+            .cta-button,
+            .btn {
+                border: 2px solid var(--text) !important;
+                background: var(--bg-alt) !important;
+                color: var(--text) !important;
+            }
+            
+            .nav-menu a:hover,
+            .nav-menu a:focus,
+            .theme-toggle:hover,
+            .cta-button:hover,
+            .btn:hover {
+                background: var(--text) !important;
+                color: var(--bg-alt) !important;
+            }
+        }
+
+        /* 모션 감소 모드 */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .progress-bar {
+                transition: none !important;
+            }
+        }
+
+        /* 다크모드 전체 최적화 */
+        [data-theme="dark"] body {
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(210, 105, 30, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(139, 69, 19, 0.05), rgba(160, 82, 45, 0.05)), 
+                var(--bg);
+        }
+
+        [data-theme="dark"] .nav-bar {
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        [data-theme="dark"] h1, 
+        [data-theme="dark"] h2, 
+        [data-theme="dark"] h3, 
+        [data-theme="dark"] h4, 
+        [data-theme="dark"] h5, 
+        [data-theme="dark"] h6 {
+            color: #f5f5f5;
+        }
+
+        [data-theme="dark"] p, 
+        [data-theme="dark"] li, 
+        [data-theme="dark"] span {
+            color: #f5f5f5;
+        }
+
+        [data-theme="dark"] .text-muted {
+            color: #a0a0a0;
+        }
+
+        [data-theme="dark"] strong {
+            color: #f39c12;
+        }
+
+        /* 다크모드에서 코드 블록 개선 */
+        [data-theme="dark"] .code-block,
+        [data-theme="dark"] div[style*="background: #1a1a1a"],
+        [data-theme="dark"] div[style*="background: rgba(0,0,0,0.8)"] {
+            background: #0d1117 !important;
+            border: 2px solid #30363d !important;
+            color: #e6edf3 !important;
+        }
+
+        /* 다크모드에서 차트 배경 개선 */
+        [data-theme="dark"] canvas {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border-radius: 8px;
+        }
+
+        /* 다크모드에서 진단 시뮬레이터 개선 */
+        [data-theme="dark"] .diagnostic-simulator {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
+            border: 2px solid rgba(255, 255, 255, 0.2) !important;
+        }
+
+        [data-theme="dark"] #errorMenu {
+            background: #2d2d2d !important;
+            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        }
+
+        [data-theme="dark"] #diagnosis {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 2px solid rgba(255, 255, 255, 0.2) !important;
+            color: #f5f5f5 !important;
+        }
+
+        /* 인쇄 최적화 */
+        @media print {
+            .nav-bar,
+            .progress-bar,
+            .floating-elements,
+            .theme-toggle {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .container {
+                max-width: none !important;
+                padding: 0 !important;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Noto Serif KR', Georgia, serif;
+            background: linear-gradient(45deg, rgba(139, 69, 19, 0.03), rgba(160, 82, 45, 0.03)), var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-size: clamp(14px, 2.5vw, 16px);
+            scroll-behavior: smooth;
+        }
+
+        /* 스킵 링크 및 접근성 */
+        .sr-only {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .skip-link:focus {
+            top: 6px;
+            box-shadow: var(--shadow);
+        }
+
+        /* 컨테이너 및 레이아웃 */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 clamp(12px, 3vw, 24px);
+        }
+
+        .content-wrapper {
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        /* 진행률 표시기 */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* 네비게이션 */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(249, 247, 244, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 8px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            transform: translateY(-100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .nav-bar {
+            background: rgba(15, 15, 15, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-bar.visible {
+            transform: translateY(0);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 clamp(12px, 3vw, 24px);
+        }
+
+        .nav-logo {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .nav-logo:hover {
+            background: rgba(139, 69, 19, 0.1);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: clamp(8px, 2vw, 16px);
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a:focus {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        /* 다크모드 토글 */
+        .theme-toggle {
+            background: var(--bg-alt);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            color: var(--text);
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        /* 헤더 */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: clamp(40px, 8vh, 80px) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: clamp(60vh, 80vh, 100vh);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            z-index: 2;
+            position: relative;
+            max-width: 90vw;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 8vw, 4rem);
+            margin-bottom: clamp(16px, 4vw, 24px);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            word-break: keep-all;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: clamp(0.9rem, 4vw, 1.6rem);
+            opacity: 0.95;
+            margin-bottom: clamp(20px, 5vw, 30px);
+            word-break: keep-all;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: clamp(8px, 2vw, 15px);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 24px);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* 터치 디바이스용 활성 상태 */
+        @media (hover: none) {
+            .nav-menu a:active {
+                background: var(--primary);
+                color: var(--white);
+                border-color: var(--primary);
+                transform: scale(0.98);
+            }
+
+            .theme-toggle:active {
+                background: var(--primary);
+                color: var(--white);
+                border-color: var(--primary);
+                transform: scale(0.95);
+            }
+
+            .cta-button:active {
+                background: var(--white);
+                color: var(--primary);
+                transform: scale(0.98);
+            }
+        }
+
+        /* 모바일 최적화 (320px 이하 대응) */
+        @media (max-width: 320px) {
+            .container {
+                padding: 0 8px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .nav-content {
+                padding: 0 8px;
+            }
+            
+            .theme-toggle {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
+            .subtitle {
+                font-size: 0.8rem;
+                margin-bottom: 16px;
+            }
+            
+            .cta-button {
+                padding: 8px 12px;
+                font-size: 0.7rem;
+                border-radius: 20px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        /* 텍스트 가독성 강화 */
+        body {
+            font-family: 'Noto Serif KR', Georgia, serif;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 69, 19, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(210, 105, 30, 0.03) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(139, 69, 19, 0.02), rgba(160, 82, 45, 0.02)), 
+                var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-size: clamp(14px, 2.5vw, 16px);
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 강화된 텍스트 대비 */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        p, li, span {
+            color: var(--text);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* 터치 디바이스용 활성 상태 */
+        @media (hover: none) {
+            .nav-menu a:active {
+                background: var(--primary);
+                color: var(--white);
+                border-color: var(--primary);
+                transform: scale(0.98);
+            }
+
+            .theme-toggle:active {
+                background: var(--primary);
+                color: var(--white);
+                border-color: var(--primary);
+                transform: scale(0.95);
+            }
+
+            .cta-button:active {
+                background: var(--white);
+                color: var(--primary);
+                transform: scale(0.98);
+            }
+        }
+
+        /* 텍스트 가독성 강화 */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            width: 100%;
+        }
+
+        p, li, span {
+            color: var(--text);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* 모바일 최적화 - 모든 디바이스 대응 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 12px;
+            }
+            
+            .nav-content {
+                padding: 0 12px;
+            }
+            
+            .nav-menu {
+                gap: 8px;
+            }
+            
+            header {
+                min-height: 60vh;
+                padding: clamp(40px, 8vh, 60px) 0;
+            }
+            
+            .hero-content {
+                padding: 0 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 8px;
+            }
+            
+            .nav-content {
+                padding: 0 8px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            header {
+                min-height: 50vh;
+                padding: clamp(30px, 6vh, 50px) 0;
+            }
+            
+            .hero-content {
+                padding: 0 8px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .container {
+                padding: 0 4px;
+            }
+            
+            .nav-content {
+                padding: 0 4px;
+            }
+            
+            .hero-content {
+                padding: 0 4px;
+            }
+            
+            .theme-toggle {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
+            .subtitle {
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+            }
+            
+            .cta-button {
+                padding: 10px 16px;
+                font-size: 0.75rem;
+                border-radius: 20px;
+            }
+
+            header {
+                min-height: 45vh;
+                padding: clamp(20px, 4vh, 40px) 0;
+            }
+        }
+
+        /* 세로 화면 최적화 */
+        @media (orientation: portrait) and (max-height: 600px) {
+            header {
+                min-height: 80vh;
+            }
+        }
+
+        /* 가로 화면 최적화 */
+        @media (orientation: landscape) and (max-height: 500px) {
+            header {
+                min-height: 100vh;
+                padding: clamp(20px, 4vh, 40px) 0;
+            }
+            
+            h1 {
+                font-size: clamp(1.5rem, 6vw, 2.5rem);
+            }
+            
+            .subtitle {
+                font-size: clamp(0.9rem, 3vw, 1.2rem);
+            }
+        }
+
+        /* 모션 감소 모드 */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 스킵 링크 -->
+    <a href="#main-content" class="skip-link">메인 콘텐츠로 이동</a>
+    
+    <!-- 진행률 표시기 -->
+    <div class="progress-bar" id="progressBar" role="progressbar" aria-label="페이지 읽기 진행률"></div>
+    
+    <!-- 네비게이션 -->
+    <nav class="nav-bar" id="navbar" aria-label="주요 네비게이션">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">🧠 철학적 프로그래밍</a>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#overview" role="menuitem">개요</a></li>
+                <li role="none"><a href="#philosophy-mapping" role="menuitem">철학자 매칭</a></li>
+                <li role="none"><a href="#methodology" role="menuitem">방법론</a></li>
+                <li role="none"><a href="#practice" role="menuitem">실습</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="다크모드 토글">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="container">
+            <div class="hero-content">
+                <h1>철학적 프로그래밍 학습론</h1>
+                <p class="subtitle">사고와 코드의 융합: 혁신적 학습 패러다임</p>
+                <div class="hero-cta">
+                    <a href="#quick-summary" class="cta-button">
+                        ⚡ 3분 요약 보기
+                    </a>
+                    <a href="#practice" class="cta-button">
+                        🚀 바로 시작하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 - 지연 로딩될 부분 -->
+    <main id="main-content" style="opacity: 1; transition: opacity 0.5s ease; width: 100%; min-height: 100vh;">
+        <!-- 3분 요약 섹션 -->
+        <section id="quick-summary" style="background: linear-gradient(135deg, #2c3e50, #34495e); color: var(--white); padding: clamp(30px, 6vh, 60px) 0; border-top: 3px solid #3498db; border-bottom: 3px solid #3498db; width: 100%;">
+            <div class="container">
+                <div class="content-wrapper">
+                    <h2 style="font-size: clamp(1.5rem, 5vw, 2.5rem); text-align: center; margin-bottom: 20px; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); width: 100%;">⚡ 3분 핵심 요약</h2>
+                    <p style="text-align: center; font-size: clamp(0.9rem, 2.5vw, 1.1rem); margin-bottom: 30px; color: #ecf0f1; opacity: 0.95; width: 100%;">
+                        바쁜 당신을 위한 핵심 아이디어 정리
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 100%;">
+                        <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 20px; border-radius: var(--radius); border: 2px solid rgba(255, 255, 255, 0.2); transition: var(--transition); position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background: rgba(52, 152, 219, 0.3); border-radius: 50%;"></div>
+                            <span style="font-size: 2rem; display: block; margin-bottom: 10px; position: relative; z-index: 2;">🎯</span>
+                            <h3 style="margin-bottom: 10px; color: #ffffff; font-weight: 600; position: relative; z-index: 2;">핵심 아이디어</h3>
+                            <p style="font-size: 0.9rem; line-height: 1.6; color: #ecf0f1; position: relative; z-index: 2;">프로그래밍을 철학적 사고로 배우면 창발적 사고력이 개발되어 더 혁신적인 솔루션을 만들 수 있습니다.</p>
+                        </div>
+                        <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 20px; border-radius: var(--radius); border: 2px solid rgba(255, 255, 255, 0.2); transition: var(--transition); position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background: rgba(46, 204, 113, 0.3); border-radius: 50%;"></div>
+                            <span style="font-size: 2rem; display: block; margin-bottom: 10px; position: relative; z-index: 2;">🔗</span>
+                            <h3 style="margin-bottom: 10px; color: #ffffff; font-weight: 600; position: relative; z-index: 2;">철학자-언어 매칭</h3>
+                            <p style="font-size: 0.9rem; line-height: 1.6; color: #ecf0f1; position: relative; z-index: 2;">플라톤→Java, 니체→JavaScript 등 철학자의 사고방식을 프로그래밍 언어와 매칭하여 학습합니다.</p>
+                        </div>
+                        <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 20px; border-radius: var(--radius); border: 2px solid rgba(255, 255, 255, 0.2); transition: var(--transition); position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background: rgba(230, 126, 34, 0.3); border-radius: 50%;"></div>
+                            <span style="font-size: 2rem; display: block; margin-bottom: 10px; position: relative; z-index: 2;">🔍</span>
+                            <h3 style="margin-bottom: 10px; color: #ffffff; font-weight: 600; position: relative; z-index: 2;">철학적 디버깅</h3>
+                            <p style="font-size: 0.9rem; line-height: 1.6; color: #ecf0f1; position: relative; z-index: 2;">에러를 철학적 관점에서 진단하여 근본 원인을 파악하고 더 효과적으로 해결할 수 있습니다.</p>
+                        </div>
+                        <div style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 20px; border-radius: var(--radius); border: 2px solid rgba(255, 255, 255, 0.2); transition: var(--transition); position: relative; overflow: hidden;">
+                            <div style="position: absolute; top: -20px; right: -20px; width: 60px; height: 60px; background: rgba(155, 89, 182, 0.3); border-radius: 50%;"></div>
+                            <span style="font-size: 2rem; display: block; margin-bottom: 10px; position: relative; z-index: 2;">🚀</span>
+                            <h3 style="margin-bottom: 10px; color: #ffffff; font-weight: 600; position: relative; z-index: 2;">비전공자 우위</h3>
+                            <p style="font-size: 0.9rem; line-height: 1.6; color: #ecf0f1; position: relative; z-index: 2;">고정관념 없는 창발적 사고 + AI 협업으로 오히려 전공자보다 혁신적 접근이 가능합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 나머지 콘텐츠는 동적으로 로드될 예정 -->
+        <div id="dynamic-content" style="width: 100%; min-height: 50vh;">
+            <!-- 여기에 나머지 섹션들이 로드됩니다 -->
+            <div style="text-align: center; padding: 60px 20px; color: var(--text-light); width: 100%;">
+                <div style="width: 40px; height: 40px; border: 3px solid var(--primary); border-top: 3px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+                <p>콘텐츠 로딩 중...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 기본 JavaScript (중요 기능만) -->
+    <script>
+        // 다크모드 토글
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            
+            if (isDark) {
+                body.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // 저장된 테마 복원
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            document.getElementById('theme-icon').textContent = '☀️';
+        }
+
+        // 진행률 표시 (최적화된 버전)
+        let ticking = false;
+        function updateProgress() {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+            document.getElementById('progressBar').setAttribute('aria-valuenow', Math.round(scrolled));
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateProgress);
+                ticking = true;
+            }
+        });
+
+        // 네비게이션 표시/숨김
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('visible');
+            } else {
+                navbar.classList.remove('visible');
+            }
+        });
+
+        // 스피너 애니메이션
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // 지연 로딩 - 나머지 콘텐츠와 스크립트들
+        window.addEventListener('load', () => {
+            // 메인 콘텐츠는 이미 표시되어 있음
+            console.log('페이지 로드 시작');
+            
+            // 동적 콘텐츠 즉시 로드 (지연 없이)
+            loadDynamicContent();
+            
+            // 외부 라이브러리 로드
+            setTimeout(loadExternalLibraries, 100);
+        });
+
+        // 페이지 로드 즉시 콘텐츠 표시
+        document.addEventListener('DOMContentLoaded', () => {
+            // 메인 콘텐츠 즉시 표시
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+                mainContent.style.opacity = '1';
+            }
+        });
+
+        function loadExternalLibraries() {
+            // Chart.js 지연 로드
+            const chartScript = document.createElement('script');
+            chartScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+            chartScript.onload = () => {
+                console.log('Chart.js 로드 완료');
+                initializeCharts();
+            };
+            document.head.appendChild(chartScript);
+
+            // AOS 지연 로드
+            const aosScript = document.createElement('script');
+            aosScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js';
+            aosScript.onload = () => {
+                const aosCSS = document.createElement('link');
+                aosCSS.href = 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css';
+                aosCSS.rel = 'stylesheet';
+                document.head.appendChild(aosCSS);
+                
+                setTimeout(() => {
+                    if (window.AOS) {
+                        AOS.init({
+                            duration: 600,
+                            easing: 'ease-in-out',
+                            once: true,
+                            offset: 50
+                        });
+                    }
+                }, 100);
+            };
+            document.head.appendChild(aosScript);
+        }
+
+        function loadDynamicContent() {
+            const dynamicContent = document.getElementById('dynamic-content');
+            dynamicContent.innerHTML = `
+                <!-- 개요 섹션 -->
+                <section id="overview" style="padding: clamp(40px, 8vh, 80px) 0; background: var(--bg-alt);">
+                    <div class="container">
+                        <div class="content-wrapper">
+                            <h2 style="font-size: clamp(1.5rem, 5vw, 2.5rem); color: var(--primary); margin-bottom: 30px; text-align: center; position: relative; font-weight: 700;">프로그래밍의 철학적 재정의</h2>
+                            <p style="text-align: center; font-size: clamp(0.9rem, 2.5vw, 1.1rem); color: var(--text-light); margin-bottom: 40px;">
+                                프로그래밍은 단순한 기술이 아닌 사유의 구조화입니다
+                            </p>
+                            
+                            <div style="background: var(--white); border-radius: var(--radius); padding: clamp(20px, 4vw, 35px); margin: 30px 0; box-shadow: var(--shadow); border: 2px solid var(--border);">
+                                <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary); font-size: clamp(1rem, 3vw, 1.3rem); font-weight: 600;">핵심 개념 구성도</h3>
+                                <div style="position: relative; height: clamp(200px, 40vw, 300px); width: 100%; background: var(--bg); border-radius: 8px; padding: 10px;">
+                                    <canvas id="conceptChart" aria-label="프로그래밍 핵심 개념 구성 차트"></canvas>
+                                </div>
+                            </div>
+
+                            <div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: var(--white); border-radius: var(--radius); padding: clamp(20px, 4vw, 35px); margin: 30px 0; position: relative; overflow: hidden; box-shadow: var(--shadow-hover); border: 2px solid rgba(255,255,255,0.1);">
+                                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                    <span style="font-size: clamp(1.5rem, 4vw, 2rem); background: rgba(255,255,255,0.1); padding: 8px; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">💡</span>
+                                    <h3 style="font-size: clamp(1rem, 3vw, 1.4rem); margin: 0; color: #ffffff;">핵심 정의</h3>
+                                </div>
+                                <blockquote style="font-size: clamp(0.9rem, 3vw, 1.2rem); font-style: italic; border-left: 4px solid #f39c12; padding-left: 16px; margin: 20px 0; line-height: 1.6; word-break: keep-all; background: rgba(255,255,255,0.05); padding: 16px; border-radius: 8px; color: #ffffff;">
+                                    "인간의 사고를 기계의 함수로 번역하고, 무질서한 과정을 표준의 질서로 정립하며, 복잡한 현실을 단순한 모델로 재창조하는 예술"
+                                </blockquote>
+                                
+                                <div style="background: #1a1a1a; border-radius: 8px; padding: 15px; margin: 15px 0; font-family: 'Courier New', monospace; font-size: clamp(11px, 2vw, 13px); overflow-x: auto; position: relative; border: 2px solid rgba(255,255,255,0.2); line-height: 1.4; color: #ffffff;">
+                                    <div style="position: absolute; top: 8px; right: 12px; background: var(--primary); color: var(--white); padding: 2px 6px; border-radius: 3px; font-size: 10px; font-weight: 600;">Code</div>
+// 철학적 프로그래밍의 본질
+function philosophicalProgramming() {
+    const humanThought = getHumanLogic();
+    const machineFunction = translate(humanThought);
+    const standardProcess = standardize(chaos);
+    const model = simplify(complexReality);
+    
+    return synthesize(
+        machineFunction, 
+        standardProcess, 
+        model
+    );
+}</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 철학자 매칭 섹션 -->
+                <section id="philosophy-mapping" style="padding: clamp(40px, 8vh, 80px) 0; background: var(--bg-section); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+                    <div class="container">
+                        <div class="content-wrapper">
+                            <h2 style="font-size: clamp(1.5rem, 5vw, 2.5rem); color: var(--primary); margin-bottom: 20px; text-align: center; font-weight: 700;">철학자-언어 매칭 시스템</h2>
+                            <p style="text-align: center; font-size: clamp(0.9rem, 2.5vw, 1.1rem); color: var(--text-light); margin-bottom: 40px;">
+                                각 철학자의 사고방식을 프로그래밍 언어의 특성과 연결합니다
+                            </p>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(15px, 3vw, 25px);">
+                                <article style="background: var(--white); border-radius: var(--radius); padding: clamp(15px, 3vw, 25px); box-shadow: var(--shadow); transition: var(--transition); position: relative; overflow: hidden; border: 2px solid var(--border); transform: scale(1); cursor: pointer;">
+                                    <div style="position: absolute; top: 0; right: 0; width: 60px; height: 60px; background: linear-gradient(45deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 0 var(--radius) 0 100%;"></div>
+                                    <h3 style="color: var(--primary); font-size: clamp(1.1rem, 3vw, 1.4rem); margin-bottom: 8px; font-weight: 700; position: relative; z-index: 2;">플라톤</h3>
+                                    <span style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 4px 12px; border-radius: 15px; font-size: clamp(0.7rem, 2vw, 0.8rem); margin-bottom: 12px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">Java (객체지향)</span>
+                                    <div style="margin: 12px 0; font-size: clamp(0.8rem, 2vw, 0.9rem); line-height: 1.6; color: var(--text); background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">이데아론</strong> = 추상 클래스</p>
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">사고순서:</strong> 추상 → 구체</p>
+                                        <p><strong style="color: var(--primary);">우선순위:</strong> 설계 > 구현</p>
+                                    </div>
+                                    <div style="background: #1a1a1a; border-radius: 6px; padding: 12px; margin: 12px 0; font-family: 'Courier New', monospace; font-size: clamp(10px, 2vw, 12px); overflow-x: auto; color: #ffffff; line-height: 1.3; border: 2px solid #333;">abstract class Beauty {
+    abstract void manifest();
+    
+    // 완벽한 이데아 정의
+    final void perfectForm() {
+        // 불변의 본질
+    }
+}</div>
+                                </article>
+
+                                <article style="background: var(--white); border-radius: var(--radius); padding: clamp(15px, 3vw, 25px); box-shadow: var(--shadow); transition: var(--transition); position: relative; overflow: hidden; border: 2px solid var(--border); transform: scale(1); cursor: pointer;">
+                                    <div style="position: absolute; top: 0; right: 0; width: 60px; height: 60px; background: linear-gradient(45deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 0 var(--radius) 0 100%;"></div>
+                                    <h3 style="color: var(--primary); font-size: clamp(1.1rem, 3vw, 1.4rem); margin-bottom: 8px; font-weight: 700; position: relative; z-index: 2;">아리스토텔레스</h3>
+                                    <span style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 4px 12px; border-radius: 15px; font-size: clamp(0.7rem, 2vw, 0.8rem); margin-bottom: 12px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">C (구조적)</span>
+                                    <div style="margin: 12px 0; font-size: clamp(0.8rem, 2vw, 0.9rem); line-height: 1.6; color: var(--text); background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">실체론</strong> = 구체적 데이터 구조</p>
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">사고순서:</strong> 관찰 → 분류 → 논리</p>
+                                        <p><strong style="color: var(--primary);">우선순위:</strong> 논리 > 직감</p>
+                                    </div>
+                                    <div style="background: #1a1a1a; border-radius: 6px; padding: 12px; margin: 12px 0; font-family: 'Courier New', monospace; font-size: clamp(10px, 2vw, 12px); overflow-x: auto; color: #ffffff; line-height: 1.3; border: 2px solid #333;">struct Human {
+    char* essence;     // 본질
+    int accidents;     // 우유성
+    
+    // 삼단논법 구현
+    void syllogism(premise1, premise2);
+};</div>
+                                </article>
+
+                                <article style="background: var(--white); border-radius: var(--radius); padding: clamp(15px, 3vw, 25px); box-shadow: var(--shadow); transition: var(--transition); position: relative; overflow: hidden; border: 2px solid var(--border); transform: scale(1); cursor: pointer;">
+                                    <div style="position: absolute; top: 0; right: 0; width: 60px; height: 60px; background: linear-gradient(45deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 0 var(--radius) 0 100%;"></div>
+                                    <h3 style="color: var(--primary); font-size: clamp(1.1rem, 3vw, 1.4rem); margin-bottom: 8px; font-weight: 700; position: relative; z-index: 2;">데카르트</h3>
+                                    <span style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 4px 12px; border-radius: 15px; font-size: clamp(0.7rem, 2vw, 0.8rem); margin-bottom: 12px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">Haskell (함수형)</span>
+                                    <div style="margin: 12px 0; font-size: clamp(0.8rem, 2vw, 0.9rem); line-height: 1.6; color: var(--text); background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">방법론적 의심</strong> = 순수함수</p>
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">사고순서:</strong> 의심 → 확실성 → 구축</p>
+                                        <p><strong style="color: var(--primary);">우선순위:</strong> 논리 > 감각</p>
+                                    </div>
+                                    <div style="background: #1a1a1a; border-radius: 6px; padding: 12px; margin: 12px 0; font-family: 'Courier New', monospace; font-size: clamp(10px, 2vw, 12px); overflow-x: auto; color: #ffffff; line-height: 1.3; border: 2px solid #333;">-- 방법론적 의심으로 확실성 도출
+cogito :: Doubt -> Certainty
+cogito doubt = "I think, therefore I am"
+
+-- 순수함수로 부작용 제거
+clearAndDistinct :: Data -> Truth</div>
+                                </article>
+
+                                <article style="background: var(--white); border-radius: var(--radius); padding: clamp(15px, 3vw, 25px); box-shadow: var(--shadow); transition: var(--transition); position: relative; overflow: hidden; border: 2px solid var(--border); transform: scale(1); cursor: pointer;">
+                                    <div style="position: absolute; top: 0; right: 0; width: 60px; height: 60px; background: linear-gradient(45deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 0 var(--radius) 0 100%;"></div>
+                                    <h3 style="color: var(--primary); font-size: clamp(1.1rem, 3vw, 1.4rem); margin-bottom: 8px; font-weight: 700; position: relative; z-index: 2;">니체</h3>
+                                    <span style="display: inline-block; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 4px 12px; border-radius: 15px; font-size: clamp(0.7rem, 2vw, 0.8rem); margin-bottom: 12px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">JavaScript (동적)</span>
+                                    <div style="margin: 12px 0; font-size: clamp(0.8rem, 2vw, 0.9rem); line-height: 1.6; color: var(--text); background: var(--bg); padding: 12px; border-radius: 6px; border: 1px solid var(--border);">
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">관점주의</strong> = 동적 타이핑</p>
+                                        <p style="margin-bottom: 6px;"><strong style="color: var(--primary);">사고순서:</strong> 파괴 → 창조 → 초월</p>
+                                        <p><strong style="color: var(--primary);">우선순위:</strong> 창조 > 보존</p>
+                                    </div>
+                                    <div style="background: #1a1a1a; border-radius: 6px; padding: 12px; margin: 12px 0; font-family: 'Courier New', monospace; font-size: clamp(10px, 2vw, 12px); overflow-x: auto; color: #ffffff; line-height: 1.3; border: 2px solid #333;">// 관점주의 - 진리는 관점에 따라
+let truth = "perspective";
+truth = 42;        // 재해석 가능
+truth = () => "will to power";
+
+// 권력의지로 기존 구조 파괴
+Object.prototype.übermensch = function() {
+    return this.transcend();
+};</div>
+                                </article>
+                            </div>
+
+                            <div style="background: var(--white); border-radius: var(--radius); padding: clamp(20px, 4vw, 35px); margin: 40px 0; box-shadow: var(--shadow); border: 2px solid var(--border);">
+                                <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary); font-size: clamp(1rem, 3vw, 1.3rem); font-weight: 600;">철학자별 사고 패턴 분석</h3>
+                                <div style="position: relative; height: clamp(250px, 50vw, 350px); width: 100%; background: var(--bg); border-radius: 8px; padding: 10px;">
+                                    <canvas id="philosopherChart" aria-label="철학자별 사고 패턴 분석 차트"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 철학적 디버깅 섹션 -->
+                <section id="debugging" style="padding: clamp(40px, 8vh, 80px) 0; background: var(--bg-alt);">
+                    <div class="container">
+                        <div class="content-wrapper">
+                            <h2 style="font-size: clamp(1.5rem, 5vw, 2.5rem); color: var(--primary); margin-bottom: 20px; text-align: center; font-weight: 700;">철학적 디버깅 진단법</h2>
+                            <p style="text-align: center; font-size: clamp(0.9rem, 2.5vw, 1.1rem); color: var(--text-light); margin-bottom: 40px;">
+                                에러의 철학적 DNA를 읽어 근본 원인을 파악합니다
+                            </p>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(12px, 3vw, 20px); margin: 40px 0;">
+                                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); text-align: center; padding: clamp(15px, 3vw, 25px) clamp(10px, 2vw, 15px); border-radius: var(--radius); transition: var(--transition); box-shadow: var(--shadow-hover); border: 2px solid rgba(255,255,255,0.1); position: relative; overflow: hidden;">
+                                    <div style="position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: rgba(255,255,255,0.1); border-radius: 50%; transform: scale(0); transition: transform 0.3s;"></div>
+                                    <div style="font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; margin-bottom: 8px; line-height: 1; position: relative; z-index: 2;">85%</div>
+                                    <div style="font-size: clamp(0.8rem, 2vw, 0.95rem); font-weight: 500; opacity: 0.95; position: relative; z-index: 2;">디버깅 시간 단축</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); text-align: center; padding: clamp(15px, 3vw, 25px) clamp(10px, 2vw, 15px); border-radius: var(--radius); transition: var(--transition); box-shadow: var(--shadow-hover); border: 2px solid rgba(255,255,255,0.1); position: relative; overflow: hidden;">
+                                    <div style="position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: rgba(255,255,255,0.1); border-radius: 50%; transform: scale(0); transition: transform 0.3s;"></div>
+                                    <div style="font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; margin-bottom: 8px; line-height: 1; position: relative; z-index: 2;">92%</div>
+                                    <div style="font-size: clamp(0.8rem, 2vw, 0.95rem); font-weight: 500; opacity: 0.95; position: relative; z-index: 2;">근본 원인 파악률</div>
+                                </div>
+                                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); text-align: center; padding: clamp(15px, 3vw, 25px) clamp(10px, 2vw, 15px); border-radius: var(--radius); transition: var(--transition); box-shadow: var(--shadow-hover); border: 2px solid rgba(255,255,255,0.1); position: relative; overflow: hidden;">
+                                    <div style="position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: rgba(255,255,255,0.1); border-radius: 50%; transform: scale(0); transition: transform 0.3s;"></div>
+                                    <div style="font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; margin-bottom: 8px; line-height: 1; position: relative; z-index: 2;">96%</div>
+                                    <div style="font-size: clamp(0.8rem, 2vw, 0.95rem); font-weight: 500; opacity: 0.95; position: relative; z-index: 2;">학습자 만족도</div>
+                                </div>
+                            </div>
+
+                            <!-- 모바일 최적화된 진단 시뮬레이터 -->
+                            <div style="background: linear-gradient(135deg, #2c3e50, #34495e); border-radius: var(--radius); padding: clamp(15px, 3vw, 25px); margin: 30px 0; color: var(--white); box-shadow: var(--shadow-hover); border: 2px solid rgba(255,255,255,0.1);">
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                                    <span style="font-size: clamp(1.2rem, 3vw, 1.6rem); background: rgba(255,255,255,0.1); padding: 8px; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">🔍</span>
+                                    <h3 style="font-size: clamp(1rem, 3vw, 1.3rem); margin: 0; color: #ffffff;">실시간 철학적 진단 시뮬레이터</h3>
+                                </div>
+                                <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                                    <div>
+                                        <h4 style="margin-bottom: 12px; font-size: clamp(0.9rem, 2.5vw, 1rem); color: #ffffff;">에러 선택</h4>
+                                        <!-- 모바일 친화적 커스텀 셀렉트 -->
+                                        <div style="position: relative;">
+                                            <button id="errorSelector" onclick="toggleErrorMenu()" style="width: 100%; background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.3); color: #ffffff; padding: 12px 16px; border-radius: 8px; font-size: clamp(0.8rem, 2vw, 0.9rem); text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition);">
+                                                <span id="selectedError">NullPointerException</span>
+                                                <span style="transform: rotate(0deg); transition: transform 0.3s; color: #ffffff;">▼</span>
+                                            </button>
+                                            <div id="errorMenu" style="position: absolute; top: 100%; left: 0; right: 0; background: #34495e; border: 2px solid rgba(255,255,255,0.3); border-radius: 8px; margin-top: 4px; z-index: 10; display: none; max-height: 200px; overflow-y: auto; box-shadow: var(--shadow-hover);">
+                                                <div onclick="selectError('null', 'NullPointerException')" style="padding: 12px 16px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: clamp(0.8rem, 2vw, 0.9rem); color: #ffffff; transition: background 0.2s;">NullPointerException</div>
+                                                <div onclick="selectError('type', 'Type Error')" style="padding: 12px 16px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: clamp(0.8rem, 2vw, 0.9rem); color: #ffffff; transition: background 0.2s;">Type Error</div>
+                                                <div onclick="selectError('memory', 'Memory Leak')" style="padding: 12px 16px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: clamp(0.8rem, 2vw, 0.9rem); color: #ffffff; transition: background 0.2s;">Memory Leak</div>
+                                                <div onclick="selectError('logic', 'Logic Error')" style="padding: 12px 16px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: clamp(0.8rem, 2vw, 0.9rem); color: #ffffff; transition: background 0.2s;">Logic Error</div>
+                                                <div onclick="selectError('recursion', 'Stack Overflow')" style="padding: 12px 16px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: clamp(0.8rem, 2vw, 0.9rem); color: #ffffff; transition: background 0.2s;">Stack Overflow</div>
+                                                <div onclick="selectError('deadlock', 'Deadlock')" style="padding: 12px 16px; cursor: pointer; font-size: clamp(0.8rem, 2vw, 0.9rem); color: #ffffff; transition: background 0.2s;">Deadlock</div>
+                                            </div>
+                                        </div>
+                                        <button onclick="diagnose()" style="background: linear-gradient(135deg, #e74c3c, #c0392b); color: var(--white); border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 12px; transition: var(--transition); width: 100%; font-size: clamp(0.8rem, 2vw, 0.9rem); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                                            🩺 철학적 진단 시작
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <h4 style="margin-bottom: 12px; font-size: clamp(0.9rem, 2.5vw, 1rem); color: #ffffff;">진단 결과</h4>
+                                        <div id="diagnosis" style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 8px; min-height: 120px; font-size: clamp(0.8rem, 2vw, 0.9rem); line-height: 1.6; border: 2px solid rgba(255,255,255,0.2); color: #ffffff;">
+                                            에러를 선택하고 진단 버튼을 클릭하세요.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 소셜 공유 및 푸터 -->
+                <section style="background: var(--bg-section); border-radius: var(--radius); padding: clamp(20px, 4vw, 30px); margin: 40px 0; text-align: center; box-shadow: var(--shadow); border: 2px solid var(--border);">
+                    <div class="container">
+                        <h2 style="color: var(--primary); margin-bottom: 12px; font-size: clamp(1.2rem, 4vw, 1.6rem); font-weight: 600;">📢 혁신을 함께 나누세요</h2>
+                        <p style="color: var(--text-light); margin-bottom: 20px; font-size: clamp(0.8rem, 2vw, 0.95rem);">
+                            철학적 프로그래밍의 아이디어를 더 많은 사람들과 공유해주세요
+                        </p>
+                        
+                        <div style="display: flex; justify-content: center; gap: clamp(8px, 2vw, 12px); flex-wrap: wrap;">
+                            <a href="https://twitter.com/intent/tweet?text=철학적%20프로그래밍%20학습론&url=${window.location.href}" 
+                               target="_blank" rel="noopener" aria-label="트위터에 공유"
+                               style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; transition: var(--transition); color: var(--white); background: #1da1f2; font-size: clamp(0.7rem, 2vw, 0.8rem); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                🐦 Twitter
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=${window.location.href}" 
+                               target="_blank" rel="noopener" aria-label="페이스북에 공유"
+                               style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; transition: var(--transition); color: var(--white); background: #1877f2; font-size: clamp(0.7rem, 2vw, 0.8rem); box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                📘 Facebook
+                            </a>
+                            <a href="javascript:void(0)" onclick="copyToClipboard()" 
+                               style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 600; transition: var(--transition); color: var(--white); background: var(--primary); font-size: clamp(0.7rem, 2vw, 0.8rem); cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                📋 링크 복사
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <footer style="background: linear-gradient(135deg, #2c3e50, #34495e); color: var(--white); padding: clamp(30px, 6vh, 50px) 0; border-radius: var(--radius) var(--radius) 0 0; margin-top: 40px; border: 2px solid rgba(255,255,255,0.1);">
+                    <div class="container">
+                        <div class="content-wrapper">
+                            <div style="text-align: center; margin-bottom: 30px;">
+                                <h3 style="margin-bottom: 12px; font-size: clamp(1.2rem, 4vw, 1.6rem); color: #ffffff;">🧠 철학적 프로그래밍 연구소</h3>
+                                <p style="margin-bottom: 20px; font-size: clamp(0.8rem, 2vw, 0.95rem); opacity: 0.9; color: #ffffff;">새로운 학습 패러다임으로 사고하는 개발자가 되어보세요</p>
+                                <div style="font-size: clamp(0.7rem, 2vw, 0.85rem); opacity: 0.8; color: #ffffff;">
+                                    &copy; 2025 철학적 프로그래밍 연구소. Created by 중년고딩철학자 & Claude AI<br>
+                                    이 문서는 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener" style="color: #f39c12; text-decoration: none;">CC BY-SA 4.0</a> 라이선스 하에 공개됩니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            `;
+
+            // 동적 콘텐츠 로드 완료 후 이벤트 바인딩
+            bindDynamicEvents();
+        }
+
+        // 동적 이벤트 바인딩
+        function bindDynamicEvents() {
+            // 부드러운 스크롤
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        // 커스텀 셀렉트 관련 함수
+        let selectedErrorType = 'null';
+
+        function toggleErrorMenu() {
+            const menu = document.getElementById('errorMenu');
+            const button = document.getElementById('errorSelector');
+            const arrow = button.querySelector('span:last-child');
+            
+            if (menu.style.display === 'none' || !menu.style.display) {
+                menu.style.display = 'block';
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                menu.style.display = 'none';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function selectError(value, text) {
+            selectedErrorType = value;
+            document.getElementById('selectedError').textContent = text;
+            toggleErrorMenu();
+        }
+
+        // 클릭 밖으로 메뉴 닫기
+        document.addEventListener('click', function(e) {
+            const selector = document.getElementById('errorSelector');
+            const menu = document.getElementById('errorMenu');
+            if (selector && menu && !selector.contains(e.target) && !menu.contains(e.target)) {
+                menu.style.display = 'none';
+                const arrow = selector.querySelector('span:last-child');
+                if (arrow) arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // 진단 함수 (향상된 버전)
+        function diagnose() {
+            const diagnosisElement = document.getElementById('diagnosis');
+            
+            const diagnoses = {
+                null: "🏛️ <strong>데카르트적 분리 문제</strong><br><br><strong>진단:</strong> 정신과 물질의 과도한 분리로 인한 연결 오류<br><br><strong>철학적 처방:</strong> Optional 패턴으로 존재성을 명확히 검증<br><br><strong>예방법:</strong> 모든 객체에 대해 존재론적 질문을 먼저 던지기",
+                type: "🌪️ <strong>니체적 관점주의 혼란</strong><br><br><strong>진단:</strong> 과도한 유연성으로 인한 타입 정체성 상실<br><br><strong>철학적 처방:</strong> TypeScript나 명시적 타입 선언으로 관점 고정<br><br><strong>예방법:</strong> '권력의지'를 코드 구조에 반영하되 일관성 유지",
+                memory: "📚 <strong>아리스토텔레스적 논리 부족</strong><br><br><strong>진단:</strong> 논리적 완결성 부족으로 인한 자원 관리 실패<br><br><strong>철학적 처방:</strong> RAII 패턴으로 객체 생명주기를 삼단논법처럼 체계화<br><br><strong>예방법:</strong> 모든 할당에는 해제가, 모든 시작에는 끝이 있어야 함",
+                logic: "⚖️ <strong>칸트적 범주 오류</strong><br><br><strong>진단:</strong> 선험적 형식의 잘못된 적용<br><br><strong>철학적 처방:</strong> 조건문 구조를 정언명령처럼 보편적으로 재설계<br><br><strong>예방법:</strong> 모든 논리는 보편적으로 적용 가능해야 함",
+                recursion: "🌀 <strong>헤겔적 변증법 무한루프</strong><br><br><strong>진단:</strong> 정-반-합의 변증법이 기저조건 없이 무한 반복<br><br><strong>철학적 처방:</strong> 절대정신에 도달하는 기저조건 설정<br><br><strong>예방법:</strong> 모든 변증법적 과정에는 종합적 결론이 있어야 함",
+                deadlock: "🤝 <strong>홉스적 만인투쟁 상태</strong><br><br><strong>진단:</strong> 자원에 대한 무제한 경쟁으로 사회계약 부재<br><br><strong>철학적 처방:</strong> 리바이어던(중앙 락 매니저)을 통한 질서 확립<br><br><strong>예방법:</strong> 모든 스레드는 사회계약에 따라 자원을 공유해야 함"
+            };
+            
+            // 애니메이션 효과
+            diagnosisElement.style.opacity = '0.3';
+            setTimeout(() => {
+                diagnosisElement.innerHTML = diagnoses[selectedErrorType];
+                diagnosisElement.style.opacity = '1';
+                diagnosisElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 300);
+        }
+
+        // 클립보드 복사
+        function copyToClipboard() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                // 간단한 토스트 메시지
+                const toast = document.createElement('div');
+                toast.style.cssText = \`
+                    position: fixed;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--primary);
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    font-size: 0.9rem;
+                    z-index: 10000;
+                    animation: fadeInOut 3s forwards;
+                \`;
+                toast.textContent = '🎉 링크가 클립보드에 복사되었습니다!';
+                document.body.appendChild(toast);
+                
+                // 토스트 애니메이션
+                const toastStyle = document.createElement('style');
+                toastStyle.textContent = \`
+                    @keyframes fadeInOut {
+                        0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+                        20%, 80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+                        100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+                    }
+                \`;
+                document.head.appendChild(toastStyle);
+                
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                    document.head.removeChild(toastStyle);
+                }, 3000);
+            }).catch(() => {
+                alert('클립보드 복사를 지원하지 않는 브라우저입니다.');
+            });
+        }
+
+            // 차트 초기화 함수
+        function initializeCharts() {
+            if (!window.Chart) return;
+
+            Chart.defaults.responsive = true;
+            Chart.defaults.maintainAspectRatio = false;
+            Chart.defaults.font.family = 'Noto Serif KR, Georgia, serif';
+            Chart.defaults.font.size = window.innerWidth < 480 ? 10 : 12;
+            Chart.defaults.color = '#1a1008'; // 강화된 텍스트 색상
+            Chart.defaults.backgroundColor = '#ffffff';
+
+            // 개념 구성도 차트
+            const conceptCtx = document.getElementById('conceptChart');
+            if (conceptCtx) {
+                new Chart(conceptCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['함수의 자동화', '프로세싱 표준화', '현실 모델링'],
+                        datasets: [{
+                            data: [35, 35, 30],
+                            backgroundColor: ['#8b4513', '#d2691e', '#a0522d'],
+                            borderWidth: 3,
+                            borderColor: '#ffffff',
+                            hoverBorderWidth: 4,
+                            hoverBorderColor: '#1a1008'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 15,
+                                    usePointStyle: true,
+                                    color: '#1a1008',
+                                    font: {
+                                        size: window.innerWidth < 480 ? 10 : 12,
+                                        weight: '600'
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(26, 16, 8, 0.95)',
+                                titleColor: '#ffffff',
+                                bodyColor: '#ffffff',
+                                borderColor: '#8b4513',
+                                borderWidth: 2,
+                                titleFont: { weight: 'bold' },
+                                bodyFont: { weight: 'normal' }
+                            }
+                        },
+                        animation: { duration: 2000 }
+                    }
+                });
+            }
+
+            // 철학자 비교 차트
+            const philosopherCtx = document.getElementById('philosopherChart');
+            if (philosopherCtx) {
+                new Chart(philosopherCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['추상화', '논리성', '유연성', '구조화', '창의성'],
+                        datasets: [
+                            {
+                                label: '플라톤 (Java)',
+                                data: [95, 85, 40, 90, 60],
+                                borderColor: '#8b4513',
+                                backgroundColor: 'rgba(139, 69, 19, 0.15)',
+                                fill: true,
+                                borderWidth: 3,
+                                pointBackgroundColor: '#8b4513',
+                                pointBorderColor: '#ffffff',
+                                pointBorderWidth: 2,
+                                pointRadius: 4
+                            },
+                            {
+                                label: '니체 (JavaScript)',
+                                data: [60, 50, 95, 40, 90],
+                                borderColor: '#d2691e',
+                                backgroundColor: 'rgba(210, 105, 30, 0.15)',
+                                fill: true,
+                                borderWidth: 3,
+                                pointBackgroundColor: '#d2691e',
+                                pointBorderColor: '#ffffff',
+                                pointBorderWidth: 2,
+                                pointRadius: 4
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                beginAtZero: true,
+                                max: 100,
+                                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                                ticks: {
+                                    stepSize: 20,
+                                    color: '#1a1008',
+                                    backdropColor: 'rgba(255, 255, 255, 0.8)',
+                                    font: {
+                                        size: window.innerWidth < 480 ? 9 : 11,
+                                        weight: '500'
+                                    }
+                                },
+                                pointLabels: {
+                                    color: '#1a1008',
+                                    font: {
+                                        size: window.innerWidth < 480 ? 10 : 12,
+                                        weight: '600'
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(139, 69, 19, 0.3)'
+                                },
+                                angleLines: {
+                                    color: 'rgba(139, 69, 19, 0.3)'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: '#1a1008',
+                                    font: {
+                                        size: window.innerWidth < 480 ? 11 : 13,
+                                        weight: '600'
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(26, 16, 8, 0.95)',
+                                titleColor: '#ffffff',
+                                bodyColor: '#ffffff',
+                                borderColor: '#8b4513',
+                                borderWidth: 2
+                            }
+                        },
+                        animation: { duration: 2000, easing: 'easeInOutQuart' }
+                    }
+                });
+            }
+        }
+
+        // 키보드 네비게이션 지원
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('errorMenu');
+                if (menu && menu.style.display === 'block') {
+                    toggleErrorMenu();
+                }
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // 성능 모니터링
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+            console.log('페이지 로드 완료: 철학적 프로그래밍 학습론');
+            
+            // 성능 메트릭 로깅 (선택사항)
+            if ('performance' in window) {
+                const loadTime = performance.now();
+                console.log(\`페이지 로드 시간: \${loadTime.toFixed(2)}ms\`);
+            }
+        });
+
+        // 에러 처리
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript Error:', e.error);
+        });
+        // PWA 지원 및 최종 최적화
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // 실제 배포 시에만 서비스 워커 등록
+                if (location.protocol === 'https:' || location.hostname === 'localhost') {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(function(registration) {
+                            console.log('ServiceWorker 등록 성공:', registration.scope);
+                            showToast('📱 오프라인에서도 이용 가능합니다', 'info');
+                        })
+                        .catch(function(err) {
+                            console.log('ServiceWorker 등록 실패:', err);
+                        });
+                }
+            });
+        }
+
+        // 네트워크 상태 모니터링
+        if ('navigator' in window && 'onLine' in navigator) {
+            function updateNetworkStatus() {
+                const isOnline = navigator.onLine;
+                if (!isOnline) {
+                    showToast('🔌 오프라인 상태입니다', 'warning');
+                } else {
+                    showToast('🌐 온라인 상태로 복구되었습니다', 'success');
+                }
+            }
+
+            window.addEventListener('online', updateNetworkStatus);
+            window.addEventListener('offline', updateNetworkStatus);
+        }
+
+        // 사용자 경험 개선 - 스크롤 성능 최적화
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            // 스크롤 중에는 복잡한 계산 지연
+            clearTimeout(scrollTimeout);
+            document.body.classList.add('scrolling');
+            
+            scrollTimeout = setTimeout(function() {
+                document.body.classList.remove('scrolling');
+            }, 150);
+        }, { passive: true });
+
+        // 스크롤 중 애니메이션 축소
+        const scrollOptimizationStyle = document.createElement('style');
+        scrollOptimizationStyle.textContent = `
+            .scrolling * {
+                animation-duration: 0.1s !important;
+                transition-duration: 0.1s !important;
+            }
+        `;
+        document.head.appendChild(scrollOptimizationStyle);
+
+        // 최종 완성도 체크
+        document.addEventListener('DOMContentLoaded', function() {
+            const requiredElements = [
+                'progressBar', 'navbar', 'main-content', 
+                'quick-summary', 'errorSelector', 'diagnosis'
+            ];
+            
+            const missingElements = requiredElements.filter(id => !document.getElementById(id));
+            
+            if (missingElements.length > 0) {
+                console.warn('일부 요소가 누락되었습니다:', missingElements);
+            } else {
+                console.log('✅ 모든 핵심 요소가 정상적으로 로드되었습니다');
+            }
+        });
+    </script>
+
+    <!-- 구조화된 데이터 추가 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "철학적 프로그래밍 연구소",
+        "description": "철학적 사고를 통한 프로그래밍 교육 혁신",
+        "url": "https://example.com",
+        "foundingDate": "2025-07-11",
+        "founder": {
+            "@type": "Person",
+            "name": "중년고딩철학자"
+        },
+        "educationalCredentialAwarded": "철학적 프로그래밍 수료증",
+        "hasProgram": {
+            "@type": "EducationalProgram",
+            "name": "철학적 프로그래밍 학습법",
+            "description": "플라톤부터 니체까지, 철학자의 사고방식으로 배우는 혁신적 프로그래밍 교육",
+            "provider": {
+                "@type": "Organization",
+                "name": "철학적 프로그래밍 연구소"
+            }
+        }
+    }
+    </script>
+
+    <!-- 추가 메타데이터 -->
+    <meta name="theme-color" content="#8b4513">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="철학적 프로그래밍">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%238b4513'/><text y='60' font-size='50' text-anchor='middle' x='50' fill='white'>🧠</text></svg>">
+</body>
+</html>
