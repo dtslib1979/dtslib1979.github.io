@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>웹페이지 코딩 백서: 2트랙 AI 협업 방법론 — Tistory 경량 버전</title>
+<meta name="description" content="Tistory(티스토리) 경량·반응형을 기준으로 ChatGPT와 Claude를 병행 운용하는 2트랙(트랙 A/B) 웹페이지 코딩 백서. JS는 FAQ 아코디언과 복사 버튼만 사용." />
+<link rel="canonical" href="https://yourdomain.com/ai-two-track-whitepaper" />
+
+<style>
+  :root{
+    --bg:#f4e5c9;     /* 파피루스 배경 */
+    --ui1:#cd853f;    /* 황토색 UI1 */
+    --ui2:#daa520;    /* 황토색 UI2 */
+    --ink:#2b2620;
+    --muted:#6a5c48;
+    --paper:#fffaf0;
+    --accent:#8b5a2b;
+    --shadow:0 2px 8px rgba(0,0,0,.08);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif;line-height:1.65}
+  .wrap{max-width:960px;margin:0 auto;padding:16px}
+  header{background:linear-gradient(180deg,rgba(205,133,63,.12),rgba(218,165,32,.08));border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  h1{margin:0 0 6px;font-size:clamp(22px,4.8vw,32px);letter-spacing:-.2px}
+  .sub{color:var(--muted);font-size:14px;margin-bottom:10px}
+  .badge{display:inline-block;background:var(--ui2);color:#fff;padding:4px 10px;border-radius:999px;font-weight:700;font-size:12px}
+  section{background:var(--paper);border:1px solid rgba(0,0,0,.06);border-radius:14px;padding:16px;margin:14px 0;box-shadow:var(--shadow)}
+  h2{font-size:18px;margin:0 0 8px;color:var(--accent)}
+  h3{font-size:16px;margin:14px 0 6px;color:var(--ui1)}
+  ul,ol{padding-left:20px;margin:8px 0}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#fff;border:1px dashed rgba(0,0,0,.12);border-radius:10px;padding:10px;overflow:auto}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .btn{appearance:none;border:0;background:var(--ui1);color:#fff;font-weight:700;padding:10px 14px;border-radius:12px;box-shadow:var(--shadow);cursor:pointer}
+  .btn.alt{background:var(--ui2)}
+  .btn.ghost{background:transparent;border:2px solid var(--ui1);color:var(--ui1)}
+  .note{font-size:13px;color:var(--muted)}
+  /* CSS-only 인포그래픽 */
+  .bars{display:grid;gap:8px}
+  .bar{display:grid;gap:4px}
+  .bar .track{height:10px;border-radius:999px;background:#efe2c6;position:relative;overflow:hidden}
+  .bar .fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--ui1),var(--ui2));width:var(--w,0%)}
+  /* FAQ 아코디언 */
+  .faq{border:1px solid rgba(0,0,0,.06);border-radius:12px;overflow:hidden}
+  .faq-item+.faq-item{border-top:1px dashed rgba(0,0,0,.08)}
+  .faq-q{width:100%;text-align:left;background:#fff5e6;color:var(--ink);padding:12px 14px;font-weight:700;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+  .faq-a{display:none;padding:12px 14px;background:#fff}
+  .faq-item[aria-expanded="true"] .faq-a{display:block}
+  .chev{font-size:12px}
+  /* 반응형 최소 320px 고려 */
+  @media (max-width:360px){
+    .btn{padding:9px 12px}
+    .badge{font-size:11px}
+  }
+  footer{color:var(--muted);font-size:12px;text-align:center;margin:22px 0}
+  .sr{position:absolute;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>웹페이지 코딩 백서: 2트랙 AI 협업 방법론</h1>
+      <div class="sub">트랙 A: Tistory 경량 · 트랙 B: GitHub Pages 풀옵션 — JS는 FAQ 아코디언과 복사 버튼만 사용</div>
+      <span class="badge">모바일 우선 · 파피루스(#f4e5c9) · 황토 UI(#cd853f,#daa520)</span>
+      <div class="btnrow">
+        <button class="btn alt" onclick="copyWhitepaper()" aria-label="백서 전체 복사">백서 복사</button>
+        <button class="btn" onclick="copyThisFile()" aria-label="이 페이지 코드 복사">페이지 코드 복사</button>
+      </div>
+      <p class="note">저자: 중년작가지망생 EduArt Engineer · 저작권: dtslib.com · 작성일: 2025-08-11</p>
+    </header>
+
+    <!-- 1 목적 -->
+    <section id="purpose">
+      <h2>1. 목적</h2>
+      <ul>
+        <li>플랫폼 제약과 목표 성격에 맞춰 <strong>2트랙(two-track)</strong>으로 개발·배포.</li>
+        <li><strong>트랙 A</strong>: Tistory(티스토리) 경량·반응형·즉시 붙여넣기.</li>
+        <li><strong>트랙 B</strong>: GitHub Pages(깃허브 페이지) 풀옵션(JavaScript, JS)·고급 인터랙션.</li>
+        <li>ChatGPT와 Claude의 <strong>강점 분업</strong>을 통해 속도·안정성·확장성 동시 확보.</li>
+      </ul>
+    </section>
+
+    <!-- 2 트랙 구분 -->
+    <section id="tracks">
+      <h2>2. 트랙 구분</h2>
+      <h3>트랙 A — Tistory 경량 버전</h3>
+      <ul>
+        <li>환경: 제한적 <code>&lt;script&gt;</code> 허용, 외부 로더 제약 → 경량 구조 필수.</li>
+        <li>원칙: HTML/CSS 중심, JS는 <strong>FAQ 아코디언</strong>과 <strong>복사 버튼</strong>만.</li>
+        <li>모바일: 320px 기준 반응형, 폰트·이미지 최소화.</li>
+        <li>전문용어 병기: 접근성(Accessibility, a11y)·검색최적화(Search Engine Optimization, SEO).</li>
+        <li>담당 권장: <strong>ChatGPT</strong> (경량 설계·호환성·즉시 실행에 최적).</li>
+      </ul>
+
+      <h3>트랙 B — GitHub Pages 풀옵션 버전</h3>
+      <ul>
+        <li>환경: 자유로운 JS/라이브러리, 정적 배포 + 글로벌 CDN(Content Delivery Network, CDN).</li>
+        <li>원칙: 리치 인터랙션, SPA(Single Page Application) 네비게이션, API(Application Programming Interface) 연동.</li>
+        <li>확장: 차트/다이어그램, 애니메이션, 폼 처리, 결제/후원 위젯 가능.</li>
+        <li>담당 권장: <strong>Claude</strong> (모듈 JS·시각효과·대시보드·연동에 강점).</li>
+      </ul>
+    </section>
+
+    <!-- 3 협업 방법론 -->
+    <section id="method">
+      <h2>3. 협업 방법론</h2>
+      <h3>공통 콘텐츠</h3>
+      <ul>
+        <li>백서 본문: 철학·아키텍처·운영 원칙·마케팅·CRM·실행 로드맵·KPI·핵심 메시지.</li>
+        <li>톤: 광고·댓글·추천 제거 → <strong>정적 게스트(Static guest)</strong> 몰입.</li>
+      </ul>
+      <h3>차별 구현</h3>
+      <ul>
+        <li>트랙 A: CSS 인포그래픽(도넛/바 대신 바 형태), 아코디언, 복사 버튼.</li>
+        <li>트랙 B: 차트 라이브러리, 스크롤 이펙트, SPA 라우팅, API 기반 대시보드.</li>
+      </ul>
+      <h3>검수·배포</h3>
+      <ul>
+        <li>Tistory: 단일 HTML 파일로 붙여넣기 → 즉시 발행.</li>
+        <li>GitHub Pages: 저장소 푸시 → Pages 활성화 → 커스텀 도메인 + HTTPS.</li>
+      </ul>
+    </section>
+
+    <!-- 4 실행 로드맵 -->
+    <section id="roadmap">
+      <h2>4. 실행 로드맵</h2>
+      <ol>
+        <li>Day 1: 공통 콘텐츠 확정(본문/요약/메타).</li>
+        <li>Day 2: 트랙 A(Tistory) 시안 완성·발행.</li>
+        <li>Day 3: 트랙 B(GitHub Pages) 풀옵션 시안 완성.</li>
+        <li>Day 4: 성능/접근성 점검(a11y, 320px, 대비).</li>
+        <li>Day 5: 병행 배포 및 입구(YouTube/News/Brunch) 연결.</li>
+      </ol>
+    </section>
+
+    <!-- 5 KPI(텍스트+CSS 바) -->
+    <section id="kpi">
+      <h2>5. KPI(텍스트 중심 + CSS 바 시각화)</h2>
+      <ul>
+        <li>3개월: 월 방문자 1,000 / 구독 50 / 후원자 5</li>
+        <li>6개월: 월 방문자 5,000 / 구독 200 / 후원자 20</li>
+        <li>12개월: 월 방문자 10,000 / 구독 500 / 후원자 50</li>
+      </ul>
+      <div class="bars" aria-label="KPI 달성도 예시 바">
+        <div class="bar">
+          <span>철학적 일관성</span>
+          <div class="track"><i class="fill" style="--w:100%"></i></div>
+        </div>
+        <div class="bar">
+          <span>실행 가능성</span>
+          <div class="track"><i class="fill" style="--w:98%"></i></div>
+        </div>
+        <div class="bar">
+          <span>비용 효율성</span>
+          <div class="track"><i class="fill" style="--w:100%"></i></div>
+        </div>
+      </div>
+      <p class="note">정성지표는 메일 답장·재방문 시간 등 내측 지표로 보완(알고리즘 의존 최소화).</p>
+    </section>
+
+    <!-- 6 핵심 성공 포인트 -->
+    <section id="keys">
+      <h2>6. 핵심 성공 포인트</h2>
+      <ul>
+        <li>환경 맞춤: 제약은 단순화, 자유는 확장으로 전환.</li>
+        <li>AI 분업: ChatGPT(경량·안정) + Claude(풀JS·연동).</li>
+        <li>정적 게스트 UX: 한 페이지 한 메시지·줄 세우기(flow control).</li>
+        <li>후원=연료 모델: 광고·댓글·추천 제거와 공존.</li>
+      </ul>
+    </section>
+
+    <!-- 7 최종 제안 -->
+    <section id="proposal">
+      <h2>7. 최종 제안</h2>
+      <ul>
+        <li>본사이트(Tistory) 운영: ChatGPT 방식으로 경량·무소음 유지.</li>
+        <li>프로젝트/이벤트(GitHub Pages): Claude 방식으로 리치 인터랙션.</li>
+        <li>콘텐츠는 동일, 기능만 차등 적용 → 관리 용이·브랜드 일관.</li>
+      </ul>
+      <div class="btnrow">
+        <button class="btn alt" onclick="copyWhitepaper()" aria-label="백서 전체 복사">백서 복사</button>
+        <button class="btn ghost" onclick="copyThisFile()" aria-label="이 페이지 코드 복사">페이지 코드 복사</button>
+      </div>
+    </section>
+
+    <!-- 8 FAQ (아코디언: JS 허용 파트) -->
+    <section id="faq">
+      <h2>8. 문답(FAQ) — 아코디언</h2>
+      <div class="faq" id="faqBox">
+        <div class="faq-item" aria-expanded="false">
+          <button class="faq-q" type="button" aria-controls="a1" aria-expanded="false">
+            왜 Tistory에서 JS를 최소화해야 하나요?<span class="chev">▶</span>
+          </button>
+          <div class="faq-a" id="a1" role="region">
+            <ul>
+              <li>플랫폼 제약 및 차단 가능성.</li>
+              <li>모바일 성능·접근성(a11y) 유지.</li>
+              <li>정적 게스트 철학과의 합치.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item" aria-expanded="false">
+          <button class="faq-q" type="button" aria-controls="a2" aria-expanded="false">
+            GitHub Pages에서 어떤 확장이 가능한가요?<span class="chev">▶</span>
+          </button>
+          <div class="faq-a" id="a2" role="region">
+            <ul>
+              <li>차트·애니메이션·SPA 라우팅.</li>
+              <li>API 연동·폼 처리·웹앱 전환.</li>
+              <li>CDN·HTTPS·자동 배포.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item" aria-expanded="false">
+          <button class="faq-q" type="button" aria-controls="a3" aria-expanded="false">
+            두 트랙의 콘텐츠 일관성은 어떻게 유지하나요?<span class="chev">▶</span>
+          </button>
+          <div class="faq-a" id="a3" role="region">
+            <ul>
+              <li>본문·메시지·KPI는 동일 원본에서 파생.</li>
+              <li>트랙 A/B는 <strong>표현 레이어</strong>만 차등.</li>
+              <li>버전 관리 문서로 변경 이력 동기화.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 백서 전문(복사용 텍스트) -->
+    <section id="whitepaper">
+      <h2>9. 백서 전문(복사용)</h2>
+      <p class="note">아래 버튼을 누르면 텍스트 백서가 복사됩니다.</p>
+      <div class="btnrow">
+        <button class="btn alt" onclick="copyWhitepaper()">백서 복사</button>
+      </div>
+    </section>
+
+    <footer>
+      © dtslib.com · Authored by 중년작가지망생 EduArt Engineer · “광고·댓글·추천 없는 조용한 전시관”
+    </footer>
+  </div>
+
+  <!-- 숨김: 복사용 백서 텍스트 -->
+  <pre id="whitepaperText" class="sr" aria-hidden="true" data-nosnippet>
+웹페이지 코딩 백서: 2트랙 AI 협업 방법론
+부제: Tistory 경량 & GitHub Pages 풀옵션 병행 전략
+저작권: dtslib.com | 저자: 중년작가지망생 EduArt Engineer | 작성일: 2025-08-11
+
+1. 목적
+- 플랫폼 제약과 목표 성격에 맞춰 2트랙(two-track)으로 개발·배포.
+- 트랙 A: Tistory(티스토리) 경량·반응형·즉시 붙여넣기.
+- 트랙 B: GitHub Pages(깃허브 페이지) 풀옵션(JavaScript, JS)·고급 인터랙션.
+- ChatGPT와 Claude 강점 분업을 통해 속도·안정성·확장성 동시 확보.
+
+2. 트랙 구분
+- 트랙 A — Tistory 경량:
+  - 제한적 <script> 허용, 외부 로더 제약 → 경량 구조.
+  - HTML/CSS 중심, JS는 FAQ 아코디언과 복사 버튼만.
+  - 320px 반응형, 폰트·이미지 최소화.
+  - 접근성(Accessibility, a11y)·검색최적화(SEO) 병기.
+  - 담당 권장: ChatGPT.
+- 트랙 B — GitHub Pages 풀옵션:
+  - 자유로운 JS/라이브러리, 글로벌 CDN.
+  - 리치 인터랙션, SPA(Single Page Application), API(Application Programming Interface) 연동.
+  - 차트·애니메이션·폼·결제/후원 위젯 가능.
+  - 담당 권장: Claude.
+
+3. 협업 방법론
+- 공통 콘텐츠: 철학·아키텍처·운영 원칙·마케팅·CRM·로드맵·KPI·핵심 메시지.
+- 차별 구현: A=CSS 인포그래픽·아코디언·복사 / B=차트·SPA·API.
+- 검수·배포: A=단일 HTML 붙여넣기 / B=저장소 푸시+HTTPS.
+
+4. 실행 로드맵
+- Day1: 공통 콘텐츠 확정
+- Day2: 트랙 A 발행
+- Day3: 트랙 B 시안
+- Day4: 성능/접근성 점검
+- Day5: 병행 배포 및 입구 연결
+
+5. KPI(예시)
+- 3개월: 월 1,000 / 구독 50 / 후원자 5
+- 6개월: 월 5,000 / 구독 200 / 후원자 20
+- 12개월: 월 10,000 / 구독 500 / 후원자 50
+
+6. 핵심 성공 포인트
+- 환경 맞춤: 제약은 단순화, 자유는 확장.
+- AI 분업: ChatGPT(경량·안정) + Claude(풀JS·연동).
+- 정적 게스트 UX: 한 페이지 한 메시지·줄 세우기.
+- 후원=연료 모델: 광고·댓글·추천 제거와 공존.
+
+7. 최종 제안
+- 본사이트(Tistory): ChatGPT 방식 경량·무소음 운영.
+- 프로젝트/이벤트(GitHub Pages): Claude 방식 리치 인터랙션.
+- 콘텐츠는 동일, 기능만 차등 → 관리 용이·브랜드 일관.
+  </pre>
+
+<script>
+/* 접근성 강화된 FAQ 아코디언 (문답만 JS) */
+(function(){
+  const box = document.getElementById('faqBox');
+  if(!box) return;
+  box.addEventListener('click', function(e){
+    const btn = e.target.closest('.faq-q');
+    if(!btn) return;
+    const item = btn.parentElement;
+    const expanded = item.getAttribute('aria-expanded') === 'true';
+    item.setAttribute('aria-expanded', String(!expanded));
+    btn.setAttribute('aria-expanded', String(!expanded));
+  });
+})();
+
+/* 안전한 클립보드 복사 (폴백 포함) */
+function copyText(value){
+  if (navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(value);
+  }
+  const ta = document.createElement('textarea');
+  ta.value = value;
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  const ok = document.execCommand('copy');
+  document.body.removeChild(ta);
+  return ok ? Promise.resolve() : Promise.reject();
+}
+function copyWhitepaper(){
+  const txt = document.getElementById('whitepaperText').textContent;
+  copyText(txt).then(()=>alert('백서가 복사되었습니다.'),()=>alert('복사에 실패했습니다. 수동으로 복사해주세요.'));
+}
+function copyThisFile(){
+  const html = document.documentElement.outerHTML;
+  copyText(html).then(()=>alert('페이지 코드가 복사되었습니다.'),()=>alert('복사 실패. 수동 복사해주세요.'));
+}
+</script>
+</body>
+</html>
