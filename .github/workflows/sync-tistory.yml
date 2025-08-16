@@ -56,10 +56,15 @@ jobs:
                 if not os.path.exists(filepath):
                     with open(filepath, 'w', encoding='utf-8') as f:
                         f.write(f'''---
+f.write(f'''---
 title: \"{entry.title}\"
 date: {date.isoformat()}
 original_url: {entry.link}
 layout: post
+---
+
+{markdown}
+''')
 ---
 
 {markdown}
